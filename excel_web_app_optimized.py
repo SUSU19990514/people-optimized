@@ -129,9 +129,6 @@ with st.sidebar:
         help="超过此大小的文件会显示性能提示"
     )
 
-# 进度条容器
-progress_container = st.container()
-
 # 操作模式选择
 mode = st.radio("请选择操作模式：", ["拆分大表为多个小表", "合并多个小表为大表"])
 
@@ -327,9 +324,9 @@ if mode == "拆分大表为多个小表":
                 
                 # 开始处理按钮
                 if st.button("🚀 开始拆分", type="primary"):
-                    # 创建进度条
-                    progress_bar = progress_container.progress(0)
-                    status_text = progress_container.empty()
+                    # 创建进度条（在按钮下方）
+                    progress_bar = st.progress(0)
+                    status_text = st.empty()
                     
                     def progress_callback(current, total):
                         progress = current / total if total > 0 else 0
@@ -514,9 +511,9 @@ elif mode == "合并多个小表为大表":
                 
                 # 开始合并按钮
                 if st.button("🚀 开始合并", type="primary"):
-                    # 创建进度条
-                    progress_bar = progress_container.progress(0)
-                    status_text = progress_container.empty()
+                    # 创建进度条（在按钮下方）
+                    progress_bar = st.progress(0)
+                    status_text = st.empty()
                     
                     def progress_callback(current, total):
                         progress = current / total if total > 0 else 0
