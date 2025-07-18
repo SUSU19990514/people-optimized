@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# 临时文件
+temp.xlsx
+*.tmp
+*.log
+excel_processor.log
+
+# 输出目录
+output/
+test_output/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 打包文件
+dist/
+build/
+*.spec
+*.exe
+*.app
+
+# 测试覆盖率
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 环境变量
+.env
+.env.local
+.env.production
+
+# 其他
+*.bak
+*.backup 
